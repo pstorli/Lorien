@@ -15,6 +15,8 @@ val CLOSE_CHARS = ")}]"
 // *********************************************************************************************
 val TAG = "Lorien"
 
+val ASCII_ZERO = 48 // 0
+
 /**
  * Log a message.
  */
@@ -63,4 +65,14 @@ fun Char.closing (): Boolean {
 fun Char.mismatch (num:Int): Boolean {
     val pos = CLOSE_CHARS.indexOf(this)
     return num != OPEN_CHARS [pos].code
+}
+
+/**
+ * Reduce this num to the sum of its digits.
+ */
+fun Int.reduce (): Int {
+    // If greater than nine, add digits together.
+    val dig1:Int = this.toString()[0].code-ASCII_ZERO
+    val dig2:Int = this.toString()[1].code-ASCII_ZERO
+    return dig1+dig2
 }
