@@ -7,7 +7,7 @@ class Luhn {
         var sum = 0
         var double = false
         for (pos in num.length-1 downTo 0) {
-            var dig: Int = num[pos].code-ASCII_ZERO
+            var dig: Int = num[pos].digit ()
 
             // Double?
             if (double) {

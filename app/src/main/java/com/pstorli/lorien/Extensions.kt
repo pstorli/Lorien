@@ -68,11 +68,18 @@ fun Char.mismatch (num:Int): Boolean {
 }
 
 /**
+ * Change the string (char) digit to a real digit.
+ */
+fun Char.digit (): Int {
+    return this.code-ASCII_ZERO
+}
+
+/**
  * Reduce this num to the sum of its digits.
  */
 fun Int.reduce (): Int {
     // If greater than nine, add digits together.
-    val dig1:Int = this.toString()[0].code-ASCII_ZERO
-    val dig2:Int = this.toString()[1].code-ASCII_ZERO
+    val dig1:Int = this.toString()[0].digit ()
+    val dig2:Int = this.toString()[1].digit ()
     return dig1+dig2
 }

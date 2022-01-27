@@ -19,4 +19,5 @@ Resolved Issues Version 1000:
   0000 Created MinStack.kt class  
   0000 Created ValidParentheses.kt class  
   0000 Added JUnit Tests - MinStackUnitTests and ValidParenthesisUnitTests  
+  0000 Added LUHN (Credit Crad Verification Code)
   
